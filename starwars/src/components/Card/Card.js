@@ -13,7 +13,7 @@ const Card = (props) => {
           }).join(" ")
           
           return (
-            <div className="Card Character">
+            <div className="Card Character" key={characterName}>
               <div className="CharacterName">{ characterName }</div>
               <CharacterProperty data={data} />
             </div>

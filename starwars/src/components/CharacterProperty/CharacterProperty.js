@@ -15,12 +15,12 @@ const CharacterProperty = (props) => {
 
           if (propertyValue.indexOf("T") === 10 && propertyValue[propertyValue.length - 1] === "Z") {
             const date = new Date(propertyValue);
-            let dateString = (date.getMonth() + 1) + "/" + date.getDate() + "/" + date.getFullYear();
+            let dateString = date.toLocaleDateString();
             propertyValue = dateString;
           }
 
           const propertyComponent = (
-            <div className="Property">
+            <div className="Property" key={propertyName}>
               <div className="Property__name">{ propertyName }</div>
               <div className="Property__value">{ propertyValue }</div>
             </div>
